@@ -1,0 +1,11 @@
+# Dynamic y axis for line charts. Measure to set the upper limit of the y axis 50% higher than the maximum value in the data set. Useful for line charts.
+
+Measure = 
+VAR MaxValue = 
+CALCULATE(
+  MAXX(dataset,[variable]
+  ), ALLSELECTED(dataset)
+)
+
+Return
+MaxValue+(50*MaxValue/100)
